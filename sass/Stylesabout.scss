@@ -1,0 +1,18 @@
+body{
+    background-image: url(../Imagenes/yopop.jpg);
+    background-size: 25%;
+}
+
+/*Mobile and Tablet Style*/
+
+@media only screen and (max-width: 960px) {
+    .sobre-mi{
+        font-size: 14px;
+        text-align: justify;
+        width:auto
+    }
+
+    body {
+        background-size: 50%;
+    }
+}
