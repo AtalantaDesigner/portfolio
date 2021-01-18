@@ -56,16 +56,19 @@
 
     <section class="container">
         <!--Sobre mi-->
-        <p class="sobre-mi"> 
-            Soy Ornella Brocco, abogada penalista y desarrolladora web fullstack poseo conocimiento de diferentes lenguajes de programación,
-            bases de datos y sistemas operativos. Me encuentro estudiando tecnologias como HTML, CSS, JAVASCRIPT, REACT, NODE, 
-            y he realizado diversos proyectos.
-        </p>
+        <p class="sobre-mi"></p>
 
         <!--imagen-->
         <img id="foto-orne" src="Imagenes/Notebookpop1.jpg" alt="el dibujo de una mujer con una notebook quien representa una desarrolladora todo ello en arte pop dicho arte caracteriza este portfolio">
            
     </section>
+
+    <script type="text/javascript">
+        const mensaje = 'Soy Ornella Brocco, abogada penalista y desarrolladora web fullstack. Poseo conocimiento de diferentes lenguajes de programación, bases de datos y sistemas operativos. Me encuentro estudiando tecnologias como HTML, CSS, JAVASCRIPT, REACT, NODE, y he realizado diversos proyectos.'
+        const p = document.getElementsByClassName('sobre-mi')[0]; 
+        mensaje.split('').forEach((c, index) => 
+            setTimeout(() => p.insertAdjacentHTML('beforeend', c), index * 50));
+    </script>
 
 </body>
 </html>
