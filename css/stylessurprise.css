@@ -1,23 +1,23 @@
 body {
   background-image: url(../Imagenes/popsurprise.jpg);
-  background-size: 50%; }
-
-.kinder {
-  width: 100%;
-  display: flex;
-  justify-content: center; }
-  .kinder #foto-kinder {
-    width: 0;
-    height: 0;
-    margin-top: 24px;
-    animation-name: slidein;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-play-state: running;
-    animation-direction: reverse;
-    animation-timing-function: linear; }
-    .kinder #foto-kinder:hover {
-      animation-play-state: paused; }
+  background-size: 50%;
+  /*Mobile and Tablet Style*/ }
+  body .kinder {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    body .kinder #foto-kinder {
+      width: 0;
+      height: 0;
+      margin-top: 24px;
+      animation-name: slidein;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-play-state: running;
+      animation-direction: reverse;
+      animation-timing-function: linear; }
+      body .kinder #foto-kinder:hover {
+        animation-play-state: paused; }
 
 @keyframes slidein {
   0% {
@@ -28,20 +28,14 @@ body {
   0% {
     width: 400px;
     height: 400px; } }
-
-/*Mobile and Tablet Style*/
-@media only screen and (min-width: 401px) and (max-width: 960px) {
-  #foto-kinder {
-    width: 0;
-    height: 0;
-    margin-right: 30px;
-    margin-left: calc(50% - 160px / 2);
-    margin-top: 10px; }
-  @keyframes slidein {
-    0% {
-      width: 160px;
-      height: 160px; } }
-  @-webkit-keyframes slidein {
-    0% {
-      width: 160px;
-      height: 160px; } } }
+  @media only screen and (max-width: 960px) {
+    body .kinder #foto-kinder {
+      margin-top: 0; }
+    @keyframes slidein {
+      0% {
+        width: 280px;
+        height: 280px; } }
+    @-webkit-keyframes slidein {
+      0% {
+        width: 280px;
+        height: 280px; } } }

@@ -6,16 +6,6 @@
 @import 'base/color';
 @import 'base/font';
 
-.header-container {
-    padding: 10px 0;
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-
 @mixin encabezados {
     font-family:$fontfamilymono;
     color: $colorsecundario;
@@ -37,17 +27,26 @@ h2 {
     font-size: 30px;
 }
 
-header {
+.header-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 14px auto;
     .navbar {
         text-align: center;
-        margin-top: 15px;
+        margin-top: 24px;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: center;
         a{
             color: $colorprimario;
             font-family: $fontfamilycursive;
             text-decoration: none;
             font-size: 25px;
             background-color: transparent; 
-            margin-left: 10px;
+            margin: 4px 6px;
             background-color: $colorsecundario;
             border: 4px solid $colorterciario;
             border-radius: 15px;
@@ -68,62 +67,57 @@ header {
     display: flex;
     justify-content: center;
     margin: 24px 10%;
+    .sobre-mi {
+        color:$colorterciario;
+        font-family: $fontfamilytecno;
+        font-size: 20px;
+        text-align: left;
+        background-color: $colorcuaternario;
+        padding: 24px;
+        border: solid 10px $colorterciario; 
+        border-style: outset;
+        display: inline-block;
+        width: 56%;
+    }
 }
 
-.sobre-mi {
-    color:$colorterciario;
-    font-family: $fontfamilytecno;
-    font-size: 20px;
-    text-align: left;
-    background-color: $colorcuaternario;
-    padding: 24px;
-    border: solid 10px $colorterciario; 
-    border-style: outset;
-    display: inline-block;
-    width: 40%;
-}
 
 /*Mobile and Tablet Style*/
 
 @media only screen and (max-width: 960px) {
-header nav a {
-    font-size: 16px;
-}
 
-header nav a:hover {
-    font-size: 16px;
-}
+    .header-container{
+        max-width: 600px;
+        .navbar{
+            margin-top: 0;
+            a {
+                padding: 4px;
+                font-size: 20px;
+                margin: 4px;
+            }
+        }
+    }
 
-.navbar{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: center;
-}
+    h1{
+        font-size: 26px;
+        padding: 8px;
+        margin-bottom: 0%;
+    }
 
-h1{
-    font-size: 26px;
-    padding: 8px;
-    margin-bottom: 0%;
-}
+    h2{
+        font-size:22px;
+        padding: 8px;
+    }
 
-h2{
-    font-size:22px;
-    padding: 8px;
-    margin-bottom:0%
-}
-
-.sobre-mi{
-    font-size: 14px;
-    width:auto
-}
-
-.container{
-    display:flex;
-    flex-wrap:wrap-reverse;
-    justify-content: center;
-    margin-top: 0%;
+    .container{
+        display:flex;
+        flex-wrap:wrap-reverse;
+        justify-content: center;
+        margin-top: 0%;
+        .sobre-mi{
+            font-size: 14px;
+            width:auto
+        }
+    }
 
 }
-
-}
- 

@@ -4,84 +4,50 @@
 body{
     background-image: url(../Imagenes/Celupop1.jpg);
     background-size: 25%;
-    footer {
-        text-align: center;
-        button {
-            background: white;
-            border-radius: 15px;
-            border: 4px solid $colorsecundario;
-            &:hover {
-                transform: scale(1.5);
-                font-size: 30px;
-            }
-            a {
-                text-decoration: none;
-                font-family:$fontfamilyfett;
+    .contact-form {
+
+        margin: 24px auto;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color: $colorprimario;
+        border-radius: 15px;
+        border: 8px solid $colorsecundario;
+        padding: 5px;
+        max-width: 600px;
+    
+        .form-row {
+    
+            label {
+                font-size: 45px;
+                font-family: $fontfamilybangers;
                 color:$colorterciario;
-                font-size: 30px;
-              }
+                -webkit-text-stroke: 2px $colorsecundario;
+                border-radius: 20px;
+                width: 100%;
             }
-        }
-
-        
-    }
-
-
-
-.contact-form{
-
-    margin: 24px auto;
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    flex-wrap: wrap;
-    background-color: $colorprimario;
-    border-radius: 15px;
-    border: 8px solid $colorsecundario;
-    padding: 5px;
-    max-width: 400px;
-
-    .form-row {
-
-        label {
-            font-size: 45px;
-            font-family: $fontfamilybangers;
-            color:$colorterciario;
-            -webkit-text-stroke: 2px $colorsecundario;
-            border-radius: 20px;
-            width: 100%;
-        }
-
-        input{
-            font-family:$fontfamilytecno;
-            padding: 6px; 
-            color: $colorprimario;
-            font-size: 20px;
-            font-weight: bold;
-            background-color: $colorterciario;
-            border-radius: 20px;
-            border:5px solid $colorsecundario;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        textarea{
-            font-family: $fontfamilytecno;
-            padding: 6px;
-            color: $colorprimario;
-            font-size: 20px;
-            font-weight: bold;
-            background-color: $colorterciario;
-            border-radius: 20px;
-            border:5px solid $colorsecundario;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .button-container{
-            width: 100%;
-            box-sizing: border-box;
+    
+            input, 
+            textarea{
+                font-family:$fontfamilytecno;
+                padding: 6px; 
+                color: $colorprimario;
+                font-size: 20px;
+                font-weight: bold;
+                background-color: $colorterciario;
+                border-radius: 20px;
+                border:5px solid $colorsecundario;
+                width: 100%;
+                box-sizing: border-box;
+            }
+    
+            ::placeholder {
+                font-family:'Share Tech Mono', monospace;
+                color: lightpink
+            }
+    
             button{
                 width: 300px;
                 margin: 4px auto;
@@ -92,28 +58,44 @@ body{
                 background-color: $colorsecundario;
                 -webkit-text-stroke: 1px $colorterciario;
                 margin-bottom: 4px;
+                display: block;
+                box-sizing: border-box;
+            }
+
+            input,
+            textarea,
+            button {
+                &:focus {
+                    outline: transparent;
+                }
+            }
+
+            input[type="email"]:invalid {
+                color: chartreuse;
+                border:5px solid $colorsecundario;
+                
             }
         }
     }
-
-::placeholder {
-    font-family:'Share Tech Mono', monospace;
-    color: lightpink
-}
-
-form div textarea:focus,
-form div input:focus,
-form div textarea:focus,
-form div button:focus{
-    outline: transparent;
-}
-
-
-.form-row input[type="email"]:invalid {
-    color: chartreuse;
-    border:5px solid $colorsecundario;
-    
-}
+    footer {
+        text-align: center;
+        button {
+            background: white;
+            border-radius: 15px;
+            border: 4px solid $colorsecundario;
+            margin-bottom: 4px;
+            &:hover {
+                transform: scale(1.5);
+                font-size: 30px;
+            }
+            a {
+                text-decoration: none;
+                font-family:$fontfamilyfett;
+                color:$colorterciario;
+                font-size: 30px;
+            }
+        }
+    }       
 }
 
 /*Mobile and Tablet Style*/
@@ -128,45 +110,30 @@ form div button:focus{
 
     body{
         background-size: 50%;
-    }
 
-    .contact-form {
-        width: 90%;
-        margin-bottom: 0px;
-        margin-top: 2px
-    }
-
-    .form-row{
-        margin-bottom: 30px;
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-
-    form{
-        div{
-            label{
-                font-size: 28px;
-            }
-            input{
-                padding: 6px; 
-                color: $colorprimario;
-                font-size: 12px;
-                width: 94%;
-            }
-            textarea{
-                padding: 6px;
-                color: $colorprimario;
-                font-size: 12px;
-                font-weight: bold;
-                width: 94%;
-            }
-            button{
-                width: 94%;
-                font-size: 24px;
-                margin-left: 5px;
-                margin-bottom: 4px;
+        .contact-form {
+            width: 90%;
+            box-sizing: border-box;
+            .form-row{
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                flex-wrap: wrap;
+                label{
+                    font-size: 28px;
+                }
+                input,
+                textarea{
+                    padding: 6px; 
+                    color: $colorprimario;
+                    font-size: 12px;
+                }
+                textarea{
+                    font-weight: bold;
+                }
+                button{
+                    font-size: 24px;
+                }
             }
         }
     }
