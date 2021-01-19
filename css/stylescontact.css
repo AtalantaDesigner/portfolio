@@ -17,31 +17,25 @@ body {
         font-size: 30px; }
 
 .contact-form {
-  display: flex;
-  justify-content: center;
-  margin: 24px; }
-
-.form-row {
+  margin: 24px auto;
   margin-bottom: 40px;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 600px;
   background-color: yellow;
   border-radius: 15px;
   border: 8px solid #5B1DC2;
-  padding: 5px; }
-
-form {
-  /*Mobile and Tablet Style*/ }
-  form div label {
+  padding: 5px;
+  max-width: 400px; }
+  .contact-form .form-row label {
     font-size: 45px;
     font-family: "Bangers", cursive;
     color: #FF00FF;
     -webkit-text-stroke: 2px #5B1DC2;
-    border-radius: 20px; }
-  form div input {
+    border-radius: 20px;
+    width: 100%; }
+  .contact-form .form-row input {
     font-family: "Share Tech Mono", monospace;
     padding: 6px;
     color: yellow;
@@ -49,8 +43,10 @@ form {
     font-weight: bold;
     background-color: #FF00FF;
     border-radius: 20px;
-    border: 5px solid #5B1DC2; }
-  form div textarea {
+    border: 5px solid #5B1DC2;
+    width: 100%;
+    box-sizing: border-box; }
+  .contact-form .form-row textarea {
     font-family: "Share Tech Mono", monospace;
     padding: 6px;
     color: yellow;
@@ -58,64 +54,67 @@ form {
     font-weight: bold;
     background-color: #FF00FF;
     border-radius: 20px;
-    border: 5px solid #5B1DC2; }
-  form div button {
-    width: 300px;
-    margin-top: 4px;
-    border-radius: 40px;
-    font-family: "Bangers", cursive;
-    font-size: 40px;
-    color: yellow;
-    background-color: #5B1DC2;
-    -webkit-text-stroke: 1px #FF00FF;
-    margin-left: 150px;
-    margin-bottom: 4px; }
-  form ::placeholder {
+    border: 5px solid #5B1DC2;
+    width: 100%;
+    box-sizing: border-box; }
+  .contact-form .form-row .button-container {
+    width: 100%;
+    box-sizing: border-box; }
+    .contact-form .form-row .button-container button {
+      width: 300px;
+      margin: 4px auto;
+      border-radius: 40px;
+      font-family: "Bangers", cursive;
+      font-size: 40px;
+      color: yellow;
+      background-color: #5B1DC2;
+      -webkit-text-stroke: 1px #FF00FF;
+      margin-bottom: 4px; }
+  .contact-form ::placeholder {
     font-family: 'Share Tech Mono', monospace;
     color: lightpink; }
-  form form div textarea:focus,
-  form form div input:focus,
-  form form div textarea:focus,
-  form form div button:focus {
+  .contact-form form div textarea:focus,
+  .contact-form form div input:focus,
+  .contact-form form div textarea:focus,
+  .contact-form form div button:focus {
     outline: transparent; }
-  form .form-row input[type="email"]:invalid {
+  .contact-form .form-row input[type="email"]:invalid {
     color: chartreuse;
     border: 5px solid #5B1DC2; }
-  @media only screen and (max-width: 960px) {
-    form footer button {
-      transform: none; }
-      form footer button a {
-        font-size: 25px; }
-    form body {
-      background-size: 50%; }
-    form .contact-form {
-      display: flex;
-      justify-content: flex-start;
-      width: 90%;
-      margin-bottom: 0px;
-      margin-top: 2px; }
-    form .form-row {
-      margin-bottom: 30px;
-      display: flex;
-      justify-content: flex-start;
-      flex-direction: column;
-      flex-wrap: wrap;
-      width: 90%; }
-    form form div label {
-      font-size: 28px; }
-    form form div input {
-      padding: 6px;
-      color: yellow;
-      font-size: 12px;
-      width: 94%; }
-    form form div textarea {
-      padding: 6px;
-      color: yellow;
-      font-size: 12px;
-      font-weight: bold;
-      width: 94%; }
-    form form div button {
-      width: 94%;
-      font-size: 24px;
-      margin-left: 5px;
-      margin-bottom: 4px; } }
+
+/*Mobile and Tablet Style*/
+@media only screen and (max-width: 960px) {
+  footer button {
+    transform: none; }
+    footer button a {
+      font-size: 25px; }
+  body {
+    background-size: 50%; }
+  .contact-form {
+    width: 90%;
+    margin-bottom: 0px;
+    margin-top: 2px; }
+  .form-row {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap; }
+  form div label {
+    font-size: 28px; }
+  form div input {
+    padding: 6px;
+    color: yellow;
+    font-size: 12px;
+    width: 94%; }
+  form div textarea {
+    padding: 6px;
+    color: yellow;
+    font-size: 12px;
+    font-weight: bold;
+    width: 94%; }
+  form div button {
+    width: 94%;
+    font-size: 24px;
+    margin-left: 5px;
+    margin-bottom: 4px; } }
