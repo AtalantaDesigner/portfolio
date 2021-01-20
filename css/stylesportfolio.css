@@ -28,7 +28,10 @@ body {
       padding: 14px; }
     body .trabajos button a {
       font-size: 26px;
-      padding: 10px; } }
+      padding: 10px; }
+      body .trabajos button a:hover {
+        transform: scale(1.5);
+        font-size: 38px; } }
 
 /*Mobile Style*/
 @media only screen and (max-width: 480px) {
