@@ -25,6 +25,7 @@ h1 {
 h2 {
     @include encabezados;
     font-size: 30px;
+    margin-top: 0;
 }
 
 .header-container {
@@ -101,7 +102,7 @@ h2 {
     h1{
         font-size: 26px;
         padding: 8px;
-        margin-bottom: 0%;
+        width: auto;
     }
 
     h2{
