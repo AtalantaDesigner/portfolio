@@ -33,7 +33,7 @@
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
                 // these IDs from the previous steps
-                emailjs.sendForm('contact_service', 'contact_form', this)
+                emailjs.sendForm('service_9f17xbj', 'template_imhxnmo', this)
                     .then(function() {
                         console.log('SUCCESS!');
                     }, function(error) {
@@ -79,10 +79,10 @@
             <input type="email" name="email" id="email" placeholder="example@gmail.com">
 
             <label for="Subject">Subject</label>
-            <input type="text" name="Subject">
+            <input type="text" name="subject">
 
             <label for="comments">Message</label>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <textarea name="message" id="" cols="30" rows="10"></textarea>
 
             <input type="submit" value="Send Message" />                
         </div>
